@@ -9,15 +9,17 @@
         alert("hello-world");
       }
       function textNumber() {
-        value = document.getElementById("2").innerHtml;
-        document.getElementsByClassName("number").write = value;
+        let textdoc = document.getElementById("2").value;
+        document.write(textdoc);
       }
     </script>
     <title>Document</title>
   </head>
   <body>
-    <button class="button" onclick="myFunction()">1</button>
-    <button id="2" class="number" onclick="textNumber()">2</button>
-    <button class="number">3</button>
+    <p><input type="text" id="pressed" value="" /></p>
+
+    <button id="2" value="2" class="number" onclick="textNumber()">1</button>
+    <button onclick="textNumber(2)">2</button>
+    <button onclick="textNumber(3)">3</button>
   </body>
 </html>
