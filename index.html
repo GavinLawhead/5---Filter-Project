@@ -8,18 +8,27 @@
       function myFunction() {
         alert("hello-world");
       }
-      function textNumber() {
-        let textdoc = document.getElementById("2").value;
-        document.write(textdoc);
-      }
+      function textNumber(value) {
+        document.getElementById('current-operand').value += console.log(value);
+        }
     </script>
     <title>Document</title>
   </head>
   <body>
-    <p><input type="text" id="pressed" value="" /></p>
-
-    <button id="2" value="2" class="number" onclick="textNumber()">1</button>
-    <button onclick="textNumber(2)">2</button>
+    <div class="output">
+      <div data-previous-operand class="previous-operand"><a></a></div>
+      <div data-current-operand class="current-operand" id="current-operand"><a></a></div>
+    </div>
+    <button
+    id="1"
+    value="1"
+    type="btn"
+    class="number"
+    onclick="textNumber('1')"
+    data-number
+  >
+    1
+  </button>    <button onclick="textNumber(2)">2</button>
     <button onclick="textNumber(3)">3</button>
   </body>
 </html>

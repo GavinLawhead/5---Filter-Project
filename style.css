@@ -1,0 +1,5 @@
+.current-operand {
+    text-decoration-color: rgb(0, 136, 255);
+    font-size: 40px;
+    z-index: 2;
+}
