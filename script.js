@@ -1,4 +1,3 @@
-const numbers = [{ hardness: 11 }, { hardness: 29 }, 1, 13, 497];
 const Minerals = [
   { gem: "Diamond", hardness: 1 },
   { gem: "Ruby", hardness: 2 },
@@ -12,11 +11,15 @@ const Minerals = [
   { metal: "Tin", hardness: 10 },
   { metal: "Gold", hardness: 11 },
 ];
+
+const numbers = [{ hardness: 11 }, { hardness: 29 }, 1, 13, 497];
 let keys = document.getElementById("searchinput");
 let but = document.getElementById("search");
 
-function searchbar() {
-  if (numbers.includes(Number(keys.value)) == false) {
+function checkKey(obj, keyName) {
+  let keyExist = Object.keys(obj).some((key) => key === keyName);
+  console.log(keyExist);
+  if (checkKey(numbers, "hardness") === false) {
     alert(keys.value + " Not Found");
   } else {
     alert(
@@ -24,4 +27,7 @@ function searchbar() {
     );
   }
 }
-but.addEventListener("click", searchbar);
+
+but.addEventListener("click", checkKey);
+
+// checkKey(numbers, "hardness"); // Return true
