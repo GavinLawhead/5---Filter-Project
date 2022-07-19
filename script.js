@@ -12,14 +12,21 @@ const Minerals = [
   { metal: "Gold", hardness: 11 },
 ];
 
-const numbers = [{ hardness: 11 }, { hardness: 29 }, 1, 13, 497];
+const numbers = {
+  hardness: 11,
+  hardness: 29,
+  hardness: 1,
+  hardness: 13,
+  hardness: 497,
+};
 let keys = document.getElementById("searchinput");
 let but = document.getElementById("search");
+but.addEventListener("click", checkKey);
 
-function checkKey(obj, keyName) {
-  let keyExist = Object.keys(obj).some((key) => key === keyName);
+function checkKey(obj) {
+  let keyExist = Object.keys(obj);
   console.log(keyExist);
-  if (checkKey(numbers, "hardness") === false) {
+  if (checkKey(numbers) === false) {
     alert(keys.value + " Not Found");
   } else {
     alert(
@@ -27,7 +34,5 @@ function checkKey(obj, keyName) {
     );
   }
 }
-
-but.addEventListener("click", checkKey);
 
 // checkKey(numbers, "hardness"); // Return true
