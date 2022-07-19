@@ -19,19 +19,19 @@ const numbers = {
   hardness: 13,
   hardness: 497,
 };
+document.innerHTML = numbers;
 let keys = document.getElementById("searchinput");
 let but = document.getElementById("search");
 but.addEventListener("click", checkKey);
 
-function checkKey(obj) {
-  let keyExist = Object.keys(obj);
-  console.log(keyExist);
-  if (checkKey(numbers) === false) {
+function checkKey() {
+  if (
+    numbers.toString().includes(document.getElementById("searchinput")) ===
+    false
+  ) {
     alert(keys.value + " Not Found");
   } else {
-    alert(
-      "mineral @ " + numbers.indexOf(Number(keys.value)) + " has that hardness"
-    );
+    alert(numbers.indexOf(Number(keys.value)) + " is in the array");
   }
 }
 
