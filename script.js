@@ -1,31 +1,17 @@
-const gems = [
-  ["Diamond", "10"],
-  ["Ruby", "9"],
-  ["Sapphire", "7.5"],
-  ["Emerald", "7.5"],
-  ["Amathyst", "7"],
-  ["Amber", "2"],
-];
+const numbers = [{ hardness: 11 }, { hardness: 29 }, 1, 13, 497];
 
-const metals = [
-  ["Iron", "4.5"],
-  ["Steel", "4.5"],
-  ["Nickel", "4"],
-  ["Tin", "1.5"],
-  ["Gold", "2.5"],
-];
+let keys = document.getElementById("searchinput");
+let but = document.getElementById("search");
 
-let minerals = gems + "," + metals;
-document.querySelector("p").innerHTML = minerals;
-
-function showall() {
-  document.querySelector("p").innerHTML = minerals;
+function searchbar() {
+  if (numbers.hasOwnProperty(Number(keys.value)) == -1) {
+    alert(keys.value + " Not Found");
+  } else {
+    alert(
+      "message shows it worked, mineral @ " +
+        numbers.indexOf(Number(keys.value)) +
+        " has that hardness"
+    );
+  }
 }
-function Gems() {
-  //   const cutat = Minerals.slice(0, 6);
-  document.querySelector("p").innerHTML = gems;
-}
-function metal() {
-  //   const cutat = Minerals.slice(6, 11);
-  document.querySelector("p").innerHTML = metals;
-}
+but.addEventListener("click", searchbar);
