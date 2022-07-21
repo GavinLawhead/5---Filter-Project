@@ -11,28 +11,37 @@ const Minerals = [
   { metal: "Tin", hardness: 10 },
   { metal: "Gold", hardness: 11 },
 ];
+var results = [];
 
-const numbers = {
-  hardness: 11,
-  hardness: 29,
-  hardness: 1,
-  hardness: 13,
-  hardness: 497,
-};
-document.innerHTML = numbers;
 let keys = document.getElementById("searchinput");
-let but = document.getElementById("search");
-but.addEventListener("click", checkKey);
-
-function checkKey() {
-  if (
-    numbers.toString().includes(document.getElementById("searchinput")) ===
-    false
-  ) {
-    alert(keys.value + " Not Found");
-  } else {
-    alert(numbers.indexOf(Number(keys.value)) + " is in the array");
-  }
+let searchbutton = document.getElementById("searchbutton");
+searchbutton.addEventListener("click", filterIt);
+function filterIt(arr, searchKey) {
+  Minerals = arr;
+  keys = searchKey;
+  return arr.filter((obj) =>
+    Object.keys(obj).some((key) => obj[key].includes(searchKey))
+  );
 }
+
+// const numbers = {
+//   hardness: 11,
+//   hardness: 29,
+//   hardness: 1,
+//   hardness: 13,
+//   hardness: 497,
+// };
+// document.innerHTML = numbers;
+
+// function checkKey() {
+//   if (
+//     numbers.toString().includes(document.getElementById("searchinput")) ===
+//     false
+//   ) {
+//     alert(keys.value + " Not Found");
+//   } else {
+//     alert(numbers.indexOf(Number(keys.value)) + " is in the array");
+//   }
+// }
 
 // checkKey(numbers, "hardness"); // Return true
