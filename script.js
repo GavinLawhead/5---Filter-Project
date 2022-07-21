@@ -11,18 +11,18 @@ const Minerals = [
   // { metal: "Tin", hardness: 10 },
   // { metal: "Gold", hardness: 11 },
 ];
-let searchinput = document.querySelector("searchinput");
 // let therock = ;
 
 function checkarray() {
   let rock = [];
   let therock = Minerals.find((rock) => rock.gem == searchinput);
+  let searchinput = document.querySelector("searchinput");
   for (let i = 0; i < Minerals.length; i++) {
     rock += Minerals[i];
     console.log(Minerals[i]);
-  }
-  if (Minerals.find((rock) => rock.gem == searchinput)) {
-    alert("this will display when the word is found");
+    if (therock.filter(searchinput)) {
+      alert("this will display when the word is found");
+    }
   }
   if (searchinput != therock) {
     alert("undefined text");
