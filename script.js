@@ -5,26 +5,18 @@ const Minerals = [
   { gem: "Emerald", hardness: 4 },
   { gem: "Amathyst", hardness: 5 },
   { gem: "Amber", hardness: 6 },
-  // { metal: "Iron", hardness: 7 },
-  // { metal: "Steel", hardness: 8 },
-  // { metal: "Nickel", hardness: 9 },
-  // { metal: "Tin", hardness: 10 },
-  // { metal: "Gold", hardness: 11 },
 ];
-// let therock = ;
 
-function checkarray() {
-  let rock = [];
-  let therock = Minerals.find((rock) => rock.gem == searchinput);
-  let searchinput = document.querySelector("searchinput");
+// make a return funtion thjat returns the matching word from the array
+window.checkarray = function () {
+  let searchinput = document.getElementById("searchinput");
+  // i am calling the textg in the input
   for (let i = 0; i < Minerals.length; i++) {
-    rock += Minerals[i];
-    console.log(Minerals[i]);
-    if (therock.filter(searchinput)) {
-      alert("this will display when the word is found");
+    // this is a for loop, looping the array
+    if (searchinput.value == Minerals[i].gem) {
+      // if the search has the same text as the array
+      console.log(searchinput.value + "was found in the array");
+      // then console.log whats in the searchbar
     }
   }
-  if (searchinput != therock) {
-    alert("undefined text");
-  }
-}
+};
