@@ -1,4 +1,4 @@
-const Minerals = [
+const minerals = [
   { gem: "Diamond", hardness: 1 },
   { gem: "Ruby", hardness: 2 },
   { gem: "Sapphire", hardness: 3 },
@@ -13,9 +13,9 @@ window.checkarray = function () {
   let doc = document.getElementById("forum").innerHTML;
   // i am calling the textg in the input
   doc = "";
-  for (let i = 0; i < Minerals.length; i++) {
+  for (let i = 0; i < minerals.length; i++) {
     // this is a for loop, looping the array
-    if (searchinput.value == Minerals[i].gem) {
+    if (searchinput.value == minerals[i].gem) {
       // if the search has the same text as the array
       console.log(searchinput.value + " was found in the array");
       // then console.log whats in the searchbar
