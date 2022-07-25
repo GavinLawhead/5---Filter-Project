@@ -12,14 +12,16 @@ window.checkarray = function () {
   let searchinput = document.getElementById("searchinput");
   let doc = document.getElementById("forum").innerHTML;
   // i am calling the textg in the input
+  doc = "";
   for (let i = 0; i < Minerals.length; i++) {
     // this is a for loop, looping the array
     if (searchinput.value == Minerals[i].gem) {
       // if the search has the same text as the array
-      doc = searchinput.value + " was found in the array";
       console.log(searchinput.value + " was found in the array");
       // then console.log whats in the searchbar
     }
+    if (doc == "") {
+      doc = searchinput.value + " was found in the array";
+    }
   }
-  doc = searchinput.value + " was found in the array";
 };
