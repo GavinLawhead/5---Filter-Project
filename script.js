@@ -1,35 +1,42 @@
 const minerals = [
-  { gem: "Vesuvianit" },
-  { gem: "Watermelon Tourmaline" },
-  { gem: "Willemite" },
-  { gem: "Zincite" },
-  { gem: "Zircon" },
-  { gem: "Zoisite" },
-  { gem: "Zultanite" },
+  " Vesuvianit",
+  " Watermelon Tourmaline",
+  " Willemite",
+  " Zincite",
+  " Zircon",
+  " Zoisite",
+  " Zultanite",
 ];
 const stones = [
-  { stone: "granite" },
-  { stone: "obsidion" },
-  { stone: "marbel" },
-  { stone: "concrete" },
-  { stone: "quartz" },
-  { stone: "talc" },
-  { stone: "river-rock" },
+  " granite",
+  " obsidion",
+  " marbel",
+  " concrete",
+  " quartz",
+  " talc",
+  " river-rock",
 ];
-
+const allarr = stones + minerals;
+function all() {
+  let searchinput3 = document.querySelector(".text");
+  // let string = JSON.stringify(minerals.gem);
+  searchinput3.innerText = allarr;
+  console.log(allarr);
+  // YOUR ALLLARR FUNCTION ISNT WORKING
+}
 function gems() {
   let searchinput = document.querySelector(".text");
-  // let gemsarr = minerals.gem;
+  // let string = JSON.stringify(minerals.gem);
   for (let i = 0; i < minerals.length; i++) {
-    searchinput.innerText = String(minerals[i]);
+    searchinput.innerText = minerals;
     console.log(minerals[i]);
   }
 }
 function stone() {
-  let searchinput = document.querySelector("stones");
-  let stonearr = stones.stone;
-}
-function all() {
-  let searchinput = document.querySelector("all");
-  let gemsandstonesarr = stones.stone + gems.gem;
+  let searchinput2 = document.querySelector(".text");
+  // let string = JSON.stringify(minerals.gem);
+  for (let j = 0; j < stones.length; j++) {
+    searchinput2.innerText = stones;
+    console.log(stones[j]);
+  }
 }
