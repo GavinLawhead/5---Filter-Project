@@ -1,3 +1,19 @@
+const allarr = [
+  " granite",
+  " obsidion",
+  " marbel",
+  " concrete",
+  " quartz",
+  " talc",
+  " river-rock",
+  " Vesuvianit",
+  " Watermelon Tourmaline",
+  " Willemite",
+  " Zincite",
+  " Zircon",
+  " Zoisite",
+  " Zultanite",
+];
 const minerals = [
   " Vesuvianit",
   " Watermelon Tourmaline",
@@ -16,29 +32,15 @@ const stones = [
   " talc",
   " river-rock",
 ];
-const allarr = [
-  " granite",
-  " obsidion",
-  " marbel",
-  " concrete",
-  " quartz",
-  " talc",
-  " river-rock",
-  " Vesuvianit",
-  " Watermelon Tourmaline",
-  " Willemite",
-  " Zincite",
-  " Zircon",
-  " Zoisite",
-  " Zultanite",
-];
-const combine = [];
+let searchinput = document.querySelector(".text");
+searchinput = "";
 function all() {
   let searchinput3 = document.querySelector(".text");
   // let string = JSON.stringify(minerals.gem);
-  searchinput3.innerText = JSON.stringify(allarr);
-  console.log(allarr);
-  // YOUR ALLLARR FUNCTION ISNT WORKING
+  for (let i = 0; i < allarr.length; i++) {
+    searchinput3.innerText = allarr;
+    console.log(allarr[i]);
+  }
 }
 function gems() {
   let searchinput2 = document.querySelector(".text");
