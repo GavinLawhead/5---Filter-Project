@@ -1,44 +1,49 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link src="style.css" href="#" />
-    <title>FilterProject</title>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
-    <p id="forum" class="forum"><h1>Sort through the names!</h1></p>
-    <button onclick="sortall()">Sort All</button>
-    <button onclick="sortbyletter()">A</button>
-    <button onclick="sortbyletter(b)">B</button>
-    <button onclick="sortbyletter(c)">C</button>
-    <button onclick="sortbyletter(d)">D</button>
-    <button onclick="sortbyletter(e)">E</button>
-    <button onclick="sortbyletter(f)">F</button>
-    <button onclick="sortbyletter(g)">G</button>
-    <button onclick="sortbyletter(h)">H</button>
-    <button onclick="sortbyletter(i)">I</button>
-    <button onclick="sortbyletter(j)">J</button>
-    <button onclick="sortbyletter(k)">K</button>
-    <button onclick="sortbyletter(l)">L</button>
-    <button onclick="sortbyletter(m)">M</button>
-    <button onclick="sortbyletter(n)">N</button>
-    <button onclick="sortbyletter(o)">O</button>
-    <button onclick="sortbyletter(p)">P</button>
-    <button onclick="sortbyletter(q)">Q</button>
-    <button onclick="sortbyletter(r)">R</button>
-    <button onclick="sortbyletter(s)">S</button>
-    <button onclick="sortbyletter(t)">T</button>
-    <button onclick="sortbyletter(u)">U</button>
-    <button onclick="sortbyletter(v)">V</button>
-    <button onclick="sortbyletter(w)">W</button>
-    <button onclick="sortbyletter(x)">X</button>
-    <button onclick="sortbyletter(y)">Y</button>
-    <button onclick="sortbyletter(z)">Z</button>
+    <div id="mydiv" className="text">
+      <h1>Sort through the names by letter!</h1>
+    </div>
+    <button onclick="showall()">Show All</button>
+    <button onclick="clicked('a')">A</button>
+    <button onclick="clicked('b')">B</button>
+    <button onclick="clicked('c')">C</button>
+    <button onclick="clicked('d')">D</button>
+    <button onclick="clicked('e')">E</button>
+    <button onclick="clicked('f')">F</button>
+    <button onclick="clicked('g')">G</button>
+    <button onclick="clicked('h')">H</button>
+    <button onclick="clicked('i')">I</button>
+    <button onclick="clicked('j')">J</button>
+    <button onclick="clicked('k')">K</button>
+    <button onclick="clicked('l')">L</button>
+    <button onclick="clicked('m')">M</button>
+    <button onclick="clicked('n')">N</button>
+    <button onclick="clicked('o')">O</button>
+    <button onclick="clicked('p')">P</button>
+    <button onclick="clicked('q')">Q</button>
+    <button onclick="clicked('r')">R</button>
+    <button onclick="clicked('s')">S</button>
+    <button onclick="clicked('t')">T</button>
+    <button onclick="clicked('u')">U</button>
+    <button onclick="clicked('v')">V</button>
+    <button onclick="clicked('w')">W</button>
+    <button onclick="clicked('x')">X</button>
+    <button onclick="clicked('y')">Y</button>
+    <button onclick="clicked('z')">Z</button>
+    <h2 class="text"></h2>
 
-
-    <h1 class="text"></h1>
-
-    <script src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
